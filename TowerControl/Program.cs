@@ -135,7 +135,7 @@ namespace TowerControl
                     // передать координаты аэропорта
                     await board.AssignBoardFlyTo(plane.FlightNumber, new() { CoordX = 0, CoordY = 0, CoordZ = 0 });
                     // передать вылетающий из круга самолет диспетчеру подхода
-                    await approach.AddPlane(new() { FlightNumber = plane.FlightNumber, Coords = plane.GetCoordinate()});
+                    await approach.AddPlane(new() { FlightNumber = plane.FlightNumber, Coords = plane.GetCoordinate() });
                     plane.Status = PlaneStatusType.LANDING;
                     await db.SaveChangesAsync();
 
@@ -221,7 +221,7 @@ namespace TowerControl
             {
                 var plane = default(PlaneDTO?);
                 var xml = default(TowerControlPlaneAdd?);
-                
+
                 try
                 {
                     xml = await GetRequestObject<TowerControlPlaneAdd>(httpContext, nameof(TowerControlPlaneAdd));
