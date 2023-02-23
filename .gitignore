@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/TowerControl/data.db
+/TowerControl/data.db-shm
+/TowerControl/data.db-wal
